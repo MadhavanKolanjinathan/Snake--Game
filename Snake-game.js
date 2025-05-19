@@ -20,7 +20,6 @@ let minutes = 0;
 let isTimerRunning = false;
 
 // Set up the game
-//isTimerRunning=false;
 function setup() { 
   canvas.width = 1200;
   canvas.height = 360;
@@ -35,6 +34,7 @@ function setup() {
   minutes = 0;
   document.getElementById('timer').textContent = "00:00";
   isGameRunning = false;
+  isTimerRunning=false;
   
 }
 
@@ -173,7 +173,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
   if (!isGameRunning) {
     isGameRunning = true;
     setup();
-    gameInterval = setInterval(gameLoop, 140);
+    gameInterval = setInterval(gameLoop, 80);
     startTimer();
   }
 });
@@ -183,7 +183,7 @@ document.getElementById('restartBtn').addEventListener('click', () => {
   resetTimer();
   isGameRunning = false;
   setup();
-  gameInterval = setInterval(gameLoop, 140);
+  gameInterval = setInterval(gameLoop, 80);
   startTimer();
 });
 
