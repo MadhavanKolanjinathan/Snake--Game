@@ -22,7 +22,7 @@ let isTimerRunning = false;
 // Set up the game
 function setup() { 
   canvas.width = 1200;
-  canvas.height = 360;
+  canvas.height = 350;
   score = 0;
   rows = canvas.height / scale;
   columns = canvas.width / scale;
@@ -131,7 +131,7 @@ function checkCollision() {
 function displayScore() {
   ctx.fillStyle = 'white';
   ctx.font = '25px Arial';
-  ctx.fillText('Score: ' + score, 500,340);
+  ctx.fillText('Score: ' + score, 500,330);
 }
 
 //! Start timer function
